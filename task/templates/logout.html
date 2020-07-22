@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logout</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/elegant-icons.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <style type="text/css">
+    <style>
+        table, th, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+            border-spacing: 5px;
+
+        }
+        th, td{
+            padding: 15px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+<center>
+<h1>{{success}}</h1>
+    <TABLE>
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>DOB</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Passport Number</th>
+                </tr>
+                <tr>
+                    <td>{{ data.full_name | escape }}</td>
+                    <td>{{ data.dob | escape }}</td>
+                    <td>{{ data.phone | escape }}</td>
+                    <td>{{ data.email | escape }}</td>
+                    <td>{{ data.passport_no | escape }}</td>
+                </tr>
+                <br>
+            </thead>
+        </TABLE><br>
+    <a href="/logout"> <button type="button" class="btn btn-primary">Logout </button></a>
+</center>
+  <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/mixitup.min.js' %}"></script>
+    <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/masonry.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
